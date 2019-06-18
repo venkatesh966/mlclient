@@ -1,0 +1,57 @@
+<div *ngIf="!resultDisplay" class="container">
+  <div class="user-profile">
+    <table style="width:300px" *ngIf="userDetails">
+      <thead>
+        <tr>
+          <th colspan="2" class="text-center">User Profile</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>First Name</td>
+          <td>{{userDetails.fullName.split(' ')[0]}}</td>
+        </tr>
+        <tr>
+          <td>Last Name</td>
+          <td>{{userDetails.fullName.split(' ')[1]}}</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>{{userDetails.email}}</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="text-center">
+            <input type="button" (click)="onLogout()" value="Logout" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="!resultDisplay" class="form-style-5">
+    <form (submit)="Solvation()">
+      <fieldset>
+        <legend><span class="number">1</span>Enter your views</legend>
+        <textarea type="text" rows="5" cols="60" class="form-control" name="userData" [(ngModel)]="userData"></textarea>
+
+      </fieldset>
+
+      <input type="submit" value="Submit" />
+    </form>
+
+
+  </div>
+
+</div>
+
+
+<div *ngIf="resultDisplay" class="result-display-container">
+
+  <div class="result-display">
+    {{resultData}}
+  </div>
+  <button (click)="resultDisplay=!resultDisplay" class="go-back">
+    Go Back
+  </button>
+
+</div>

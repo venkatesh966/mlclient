@@ -1,0 +1,76 @@
+<!-- <div class="login_container">
+  <div class="form-group">
+    <label class="control-label col-sm-2">bookdata</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  [(ngModel)]="BookDataString.bookdata" name="bookdata" placeholder="Enter Book Data">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">Rating</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  [(ngModel)]="BookDataString.Rating" name="Rating" placeholder="Enter Rating">
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button (click) = "addBookData()" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+
+</div>
+
+
+<form class="form-horizontal" (submit) = "addTrainBookData()">
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Train bookdata</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  [(ngModel)]="trained.trainedData" name="trainedData" placeholder="Train Book Data">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Train Articles</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  [(ngModel)]="trained.trainedArticles" name="trainedArticles" placeholder="Train Articles">
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</form>
+
+<div class="col-sm-offset-2 col-sm-10">
+  <button (click)="logout()" class="btn btn-default">Logout</button>
+</div> -->
+
+<div class = "container">
+<div class="form-style-5">
+  <form (submit) = "addBookData()">
+  <fieldset>
+  <legend><span class="number">1</span> Book Info</legend>
+  <input type="text" [(ngModel)]="BookDataString.bookdata" name="bookdata" placeholder="Enter Book Data">
+  <input type="text"  [(ngModel)]="BookDataString.Rating" name="Rating" placeholder="Enter Rating">
+  </fieldset>
+
+  <input type="submit" value="Submit" />
+  </form>
+
+  
+  </div>
+
+  <div class="form-style-5">
+    <form (submit) = "addTrainBookData()">
+    <fieldset>
+    <legend><span class="number">2</span> trainedData Info</legend>
+    <input type="text" [(ngModel)]="trained.trainedData" name="trainedData" placeholder="Train Book Data">
+    <input type="text"  [(ngModel)]="trained.trainedArticles" name="trainedArticles" placeholder="Train Articles">
+
+    </fieldset>
+  
+    <input type="submit" value="Submit" />
+    </form>
+  
+    
+    </div>
+  </div>
